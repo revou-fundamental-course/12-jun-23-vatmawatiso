@@ -1,6 +1,8 @@
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
   background-color: #b9d9ea;
+  margin-left: 470px;
+  margin-right: 400px;
 }
 
 header {
@@ -9,17 +11,15 @@ header {
   border-radius: 10px;
   text-align: center;
   display: flex;
-  flex-direction: column-reverse;
-  margin-left: 25rem;
-  margin-right: 25rem;
+  justify-content: center;
+  width: 400px;
   padding: 10px 10px;
   margin-top: 30px;
 }
 
 .txtSection {
   /* background-color: orange; */
-  margin-left: 25rem;
-  margin-right: 25rem;
+  width: 420px;
   margin-top: 25px;
 }
 
@@ -88,8 +88,7 @@ footer {
   text-align: center;
   display: flex;
   flex-direction: column-reverse;
-  margin-left: 25rem;
-  margin-right: 25rem;
+  width: 400px;
   padding: 10px 10px;
   margin-top: 30px;
 }
@@ -99,8 +98,9 @@ a {
 }
 
 /* Agar tampilan responsive */
-/* @media screen and (max-width: 800px) {
-  header {
+@media screen and (max-width: 800px) {
+  header,
+  footer {
     background-color: #214177;
   }
-} */
+}
