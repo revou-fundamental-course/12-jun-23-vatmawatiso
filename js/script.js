@@ -2,6 +2,18 @@ document.getElementById("tombol_form").addEventListener("click", konversi);
 document.getElementById("tombol_reverse").addEventListener("click", reverse);
 document.getElementById("tombol_reset").addEventListener("click", reset);
 
+const numberRegex = /^[0-9]+$/;
+const inputfield = document.getElementById("inputfield");
+
+inputfield.addEventListener("keypress", function (event) {
+  if (!numberRegex.test(event.key)) {
+    console.log("cetak hasil = ", event.key);
+    event.preventDefault();
+  } else {
+    console.log("error!");
+  }
+});
+
 function reset() {
   document.getElementById("inputfield").value = "";
 }
@@ -11,6 +23,7 @@ function konversi() {
 
   if (inputCelcius !== "") {
     var hasilKonversi = (inputCelcius * 9) / 5 + 32;
+
     console.log("hasil konversi = ", hasilKonversi);
     document.getElementById("hasil").innerHTML = hasilKonversi;
 
@@ -29,6 +42,7 @@ function reverse() {
 
   if (inputCelcius !== "") {
     var hasilReverse = ((inputCelcius - 32) * 5) / 9;
+
     console.log("hasil konversi = ", hasilReverse);
     document.getElementById("hasil").innerHTML = hasilReverse;
 
